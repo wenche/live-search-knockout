@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search</title>
+    <link type="text/css" rel="stylesheet" href="live-search.css" media="all">
+  </head>
+  <body>
+    <div class="container">
+      <form action="/search" method="get" class="form-search">
+        <fieldset>
+          <h1>Filmsøk</h1>
+          <input type="search" class="text search-query" data-bind='value: query, valueUpdate: "keyup"' name="q" autocomplete="off">
+
+          <ol class="live-search-results" data-bind="foreach: items, visible: items().length > 0">
+            <li data-bind="text: item"></li>
+           </ol> 
+          <input type="submit" class="btn" value="Search">
+        </fieldset>
+      </form>
+    </div>
+    <script type="text/javascript" src="lib/jquery.js"></script>
+    <script type="text/javascript" src="lib/knockout-2.2.0.js"></script>
+    <script type="text/javascript" src="src/list-item-model.js"></script>
+    <script type0"text/javascript" src="src/list-view-model.js"></script>
+  </body>
+</html>
